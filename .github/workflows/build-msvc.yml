@@ -24,8 +24,8 @@ jobs:
         run: cmake -G "Visual Studio 16 2019" -A x64 -T version=14.25 -DCMAKE_CUDA_ARCHITECTURES="60;61;75;86" -B./build
 
       - name: CMake build
-        working-directory: build
-        run: cmake --build . --target ALL_BUILD --config Debug -- /nologo /verbosity:minimal /maxcpucount
+        shell: cmd
+        run: cd build && cmake --build . --target ALL_BUILD --config Debug -- /nologo /verbosity:minimal /maxcpucount
      
       - name: Archive Release
         uses: thedoctor0/zip-release@master
