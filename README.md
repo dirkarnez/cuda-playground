@@ -1,8 +1,8 @@
 cuda-boilerplate
 ================
 ### Notes
-- CUDA Toolkit should be installed because CMake expects CUDA installation files are in somewhere
-- Visual Studio only. No MingW should be used at the moment
+- CUDA Toolkit should be installed because CMake expects these installation files are in somewhere
+- Visual Studio only. No MinGW should be used at the moment
 
 ### TODOs
 - [ ] Debugger settings (gdb may not work)
