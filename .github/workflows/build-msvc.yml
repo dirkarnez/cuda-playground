@@ -1,0 +1,41 @@
+name: cpp-cuda-release-actions-workflow
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: windows-2019
+    env:
+      msvc2019TargetZip: cuda-boilerplate-${{ github.ref_name }}-msvc2019.zip
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: Jimver/cuda-toolkit@v0.2.8
+        id: cuda-toolkit
+        with:
+          cuda: '11.3.0'
+
+      - name: CMake generate
+        shell: cmd
+        run: cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_CUDA_ARCHITECTURES="60;61;75;86" -B./build
+
+      - name: CMake build
+        working-directory: build
+        run: cmake --build . --target ALL_BUILD --config Debug -- /nologo /verbosity:minimal /maxcpucount
+     
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: "zip"
+          directory: "cuda-boilerplate/build/Debug"
+          filename: "${{ env.msvc2019TargetZip }}"
+          
+      - name: Release prebuilt
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "cuda-boilerplate/build/Debug/${{ env.msvc2019TargetZip }}"
+          allowUpdates: true
