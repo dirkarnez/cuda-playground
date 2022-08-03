@@ -21,7 +21,7 @@ jobs:
 
       - name: CMake generate
         shell: cmd
-        run: cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_CUDA_ARCHITECTURES="60;61;75;86" -B./build
+        run: cmake -G "Visual Studio 16 2019" -A x64 -T version=14.25 -DCMAKE_CUDA_ARCHITECTURES="60;61;75;86" -B./build
 
       - name: CMake build
         working-directory: build
