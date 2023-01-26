@@ -10,5 +10,6 @@ cuda-boilerplate
 - [ ] Debugger settings (gdb may not work)
 
 ### Reference
-- [Building Cross-Platform CUDA Applications with CMake | NVIDIA Technical Blog](https://developer.nvidia.com/blog/building-cuda-applications-cmake/)
-- [Use CMake to compile CUDA program · CUDA Little Book](https://nanxiao.gitbooks.io/cuda-little-book/content/posts/use-cmake-to-compile-cuda-program.html)
+- [**thadeuluiz/RTspice: A real-time netlist based audio circuit plugin**](https://github.com/thadeuluiz/RTspice)
+- [**Building Cross-Platform CUDA Applications with CMake | NVIDIA Technical Blog**](https://developer.nvidia.com/blog/building-cuda-applications-cmake/)
+- [**Use CMake to compile CUDA program · CUDA Little Book**](https://nanxiao.gitbooks.io/cuda-little-book/content/posts/use-cmake-to-compile-cuda-program.html)
