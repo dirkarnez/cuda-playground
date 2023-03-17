@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(cuda-boilerplate LANGUAGES CXX CUDA)
+project("cuda-playground" LANGUAGES CXX CUDA)
 
 # add_library(cuda_test STATIC
 # #   randomize.cpp
