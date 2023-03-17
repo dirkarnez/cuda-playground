@@ -1,5 +1,5 @@
-cuda-boilerplate
-================
+cuda-playground
+===============
 ### Notes
 - CUDA Toolkit should be installed because CMake expects these installation files are in somewhere
 - Visual Studio only. No MinGW should be used at the moment
