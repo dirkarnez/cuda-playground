@@ -15,3 +15,6 @@ cuda-playground
 - [**Use CMake to compile CUDA program · CUDA Little Book**](https://nanxiao.gitbooks.io/cuda-little-book/content/posts/use-cmake-to-compile-cuda-program.html)
 - [**shinpei0208/gdev: First-Class GPU Resource Management: Device Drivers, Runtimes, and CUDA Compilers for Nouveau.**](https://github.com/shinpei0208/gdev)
   - [nouveau](https://nouveau.freedesktop.org/)
+
+
+<!-- Security scan triggered at 2026-09-15 09:39:09 -->
